@@ -4,10 +4,12 @@ import Home from './pages/homepage/homepage.js';
 import Contact from './pages/contact/contact.js';
 import About from './pages/about/about.js';
 import { Route, Link } from 'react-router-dom';
+import NavBar from './components/organisms/navbar';
 
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <Route exact path="/" component={Home} />
       <Route exact path="/about" component={About} />
       <Route exact path="/contact" component={Contact} />
