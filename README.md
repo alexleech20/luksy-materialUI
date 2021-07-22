@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `yarn install`
+
+Then you can run the following below. You will need this to install the necessary yarn packages such as router dom and material ui.
+
 ### `yarn start`
 
 Runs the app in the development mode.\
