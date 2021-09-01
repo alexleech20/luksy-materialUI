@@ -111,6 +111,12 @@ export const GlobalCss = withStyles(() => ({
             paddingLeft: '1rem',
             paddingRight: '1rem',
         },
+
+        // misc
+
+        'noDecoration': {
+            textDecoration: 'none',
+        },
     }
 }))(() => null);
 

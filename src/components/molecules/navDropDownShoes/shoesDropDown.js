@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles, Button, ClickAwayListener, Grow, Paper, Popper, MenuItem, MenuList, Typography }  from '@material-ui/core';
 import clsx from 'clsx';
+import Nike from '../../../pages/shoes/nike';
 
 const useStyles = makeStyles((theme) => ({
     uppercaseNone: {
@@ -45,35 +46,35 @@ function ShoesDropDown() {
     return (
         <div>
             <Typography>
-                    <Button
-                        ref={anchorRef}
-                        aria-controls={open ? 'menu-list-grow' : undefined}
-                        aria-haspopup="true"
-                        onClick={handleToggle}
-                        className={clsx(classes.ml1, classes.uppercaseNone)}
-                    >
-                        Shoes
-                    </Button>
-                </Typography>
+                <Button
+                    ref={anchorRef}
+                    aria-controls={open ? 'menu-list-grow' : undefined}
+                    aria-haspopup="true"
+                    onClick={handleToggle}
+                    className={clsx(classes.ml1, classes.uppercaseNone)}
+                >
+                    Shoes
+                </Button>
+            </Typography>
 
-                <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
-                    {({ TransitionProps, placement }) => (
-                        <Grow
-                            {...TransitionProps}
-                            style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-                        >
-                            <Paper>
-                                <ClickAwayListener onClickAway={handleClose}>
-                                    <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                        <MenuItem onClick={handleClose} to="/nike">Nike</MenuItem>
-                                        <MenuItem onClick={handleClose}>Vans</MenuItem>
-                                        <MenuItem onClick={handleClose}>Kids Shoes</MenuItem>
-                                    </MenuList>
-                                </ClickAwayListener>
-                            </Paper>
-                        </Grow>
-                    )}
-                </Popper>
+            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+                {({ TransitionProps, placement }) => (
+                    <Grow
+                        {...TransitionProps}
+                        style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+                    >
+                        <Paper>
+                            <ClickAwayListener onClickAway={handleClose}>
+                                <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
+                                    <MenuItem onClick={handleClose} to={Nike}>Nike</MenuItem>
+                                    <MenuItem onClick={handleClose}>Vans</MenuItem>
+                                    <MenuItem onClick={handleClose}>Kids Shoes</MenuItem>
+                                </MenuList>
+                            </ClickAwayListener>
+                        </Paper>
+                    </Grow>
+                )}
+            </Popper>
         </div>
     );
 }
