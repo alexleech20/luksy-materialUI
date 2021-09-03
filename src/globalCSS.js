@@ -102,7 +102,10 @@ export const GlobalCss = withStyles(() => ({
         '.pl3': {
             paddingLeft: '2rem',
         },
-        
+        '.py05': {
+            paddingTop: '.5rem',
+            paddingBottom: '.5rem',
+        },
         '.py1': {
             paddingTop: '1rem',
             paddingBottom: '1rem',
