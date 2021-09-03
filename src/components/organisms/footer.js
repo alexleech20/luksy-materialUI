@@ -38,18 +38,22 @@ function Footer() {
                             <span className="t-grey">
                                 We're here for all your custom shoe needs :)
                             </span> */}
-                            <Box borderBottom={1}>Help</Box>
+                            <Box>
+                                <h3>
+                                    Help
+                                </h3>
+                            </Box>
                             <Box>
                                 <Link href="/" color="inherit">
                                     Contact
                                 </Link>
                             </Box>
-                            <Box>
+                            <Box className="pt05">
                                 <Link href="/" color="inherit">
                                     Privacy
                                 </Link>
                             </Box>
-                            <Box>
+                            <Box className="pt05">
                                 <Link href="/" color="inherit">
                                     About Us
                                 </Link>
@@ -59,8 +63,12 @@ function Footer() {
                         {/* use twitter, insta, depop, facebook icons in social list */}
 
                         <Grid item xs={12} sm={4}>
-                            <Box borderBottom={1}>Socials</Box>
-                            <Box className="pt05">
+                            <Box>
+                                <h3>
+                                    Socials
+                                </h3>
+                            </Box>
+                            <Box>
                                 <Link href="https://www.instagram.com/luksydesignscustoms/" color="inherit">
                                     Instagram
                                 </Link>
