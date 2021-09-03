@@ -25,19 +25,12 @@ function Footer() {
                                     Luksy Designs Customs
                                 </h3>
                                 <p>
-                                    Here for all your customising needs! :)
+                                    We're here for all your customising needs! :)
                                 </p>
                             </div>
                                 
                         </Grid>
                         <Grid item xs={12} sm={4}>
-
-                            {/* <h5>
-                                Luksy Designs Customs
-                            </h5>
-                            <span className="t-grey">
-                                We're here for all your custom shoe needs :)
-                            </span> */}
                             <Box>
                                 <h3>
                                     Help
