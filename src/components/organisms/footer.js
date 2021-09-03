@@ -91,8 +91,8 @@ function Footer() {
                             
                         </Grid>
                     </Grid>
-                    <Grid container>
-                        <Box className="pt05">
+                    <Grid container className="mt2">
+                        <Box>
                             &copy; {new Date().getFullYear()} Copyright: Luksy Designs Customs. All Rights Reserved.
                         </Box>
                     </Grid>
