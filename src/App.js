@@ -8,6 +8,7 @@ import Nike from './pages/shoes/nike';
 import KidsShoes from './pages/shoes/kids-shoes';
 import { Route } from 'react-router-dom';
 import NavBar from './components/organisms/navbar';
+import Footer from './components/organisms/footer';
 import GlobalCss from './globalCSS';
 import { createTheme } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
@@ -34,6 +35,7 @@ function App() {
         <Route exact path="/nike" component={Nike} />
         <Route exact path="/vans" component={Vans} />
         <Route exact path="/kids-shoes" component={KidsShoes} />
+        <Footer />
       </div>
     </ThemeProvider>
   );
