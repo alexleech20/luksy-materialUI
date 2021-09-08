@@ -6,7 +6,7 @@ import About from './pages/about/about.js';
 import Vans from './pages/shoes/vans';
 import Nike from './pages/shoes/nike';
 import KidsShoes from './pages/shoes/kids-shoes';
-import { Route } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import NavBar from './components/organisms/navbar';
 import Footer from './components/organisms/footer';
 import GlobalCss from './globalCSS';
@@ -22,22 +22,25 @@ const theme = createTheme({
   }
 });
 
-
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <div className="App">
-        <GlobalCss />
-        <NavBar />
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/contact" component={Contact} />
-        <Route exact path="/nike" component={Nike} />
-        <Route exact path="/vans" component={Vans} />
-        <Route exact path="/kids-shoes" component={KidsShoes} />
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <div className="App">
+          <GlobalCss />
+          <NavBar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/nike" component={Nike} />
+            <Route exact path="/vans" component={Vans} />
+            <Route exact path="/kids-shoes" component={KidsShoes} />
+          </Switch>
+          <Footer />
+        </div>
+      </ThemeProvider>
+    </Router>
   );
 }
 

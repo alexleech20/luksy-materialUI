@@ -4,10 +4,10 @@ import { makeStyles, Container, Grid, Box, Link }  from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
     footer: {
         width: '-webkit-fill-available',
-        position: 'fixed',
         left: '0',
         bottom: '0',
         backgroundColor: '#D3D3D3',
+        marginTop: 'auto',
     },
 }));
 
@@ -16,7 +16,7 @@ function Footer() {
 
     return (
         <footer>
-            <Box className={classes.footer} px={{ xs: 3, sm: 10 }} py={{ xs: 5, sm: 6 }}>
+            <Box className={classes.footer} px={{ xs: 3, sm: 10 }} py={{ xs: 3 }}>
                 <Container maxWidth="lg">
                     <Grid container spacing={4}>
                         <Grid item xs={12} sm={4}>
@@ -87,6 +87,11 @@ function Footer() {
                     <Grid container className="mt2">
                         <Box>
                             &copy; {new Date().getFullYear()} Copyright: Luksy Designs Customs. All Rights Reserved.
+                        </Box>       
+                    </Grid>
+                    <Grid container className="mt1">
+                        <Box>
+                            Website created by <Link href="https://www.linkedin.com/in/alexander-leech-96889817b/">Alexander Leech</Link>
                         </Box>
                     </Grid>
                 </Container>

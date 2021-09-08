@@ -51,6 +51,18 @@ export const GlobalCss = withStyles(() => ({
             marginTop: '1rem',
             marginBottom: '1rem',
         },
+        '.my2': {
+            marginTop: '1.5rem',
+            marginBottom: '1.5rem',
+        },
+        '.my3': {
+            marginTop: '2rem',
+            marginBottom: '2rem',
+        },
+        '.my4': {
+            marginTop: '2.5rem',
+            marginBottom: '2.5rem',
+        },
         '.mxAuto': {
             marginTop: 'auto',
             marginBottom: 'auto',
