@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, Grid, Typography, Card, CardActionArea, CardContent, CardMedia } from '@material-ui/core';
+import { makeStyles, Grid, Typography, Card, CardActionArea, CardMedia } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import Image from './headshot.png';
 
@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 const TITLE = "About Us";
 
 function About() {
-
+    
     const classes = useStyles();
 
     return (
@@ -34,7 +34,7 @@ function About() {
                                 title="Lukman's headshot"
                                 component="img"
                             />
-                        </CardActionArea>
+                            </CardActionArea>
                     </Card>
                 </Grid>
                 <Grid item xs={12} md={4} spacing={1}>

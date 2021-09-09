@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import ShoesDropDown from '../molecules/navDropDownShoes/shoesDropDown';
 import ConnectDropDown from '../molecules/navDropDownConnect/connectDropDown';
+import BurgerMenu from '../molecules/navBurgerMenu/navBurgerMenu';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -28,7 +29,18 @@ const useStyles = makeStyles((theme) => ({
     my1: {
         marginLeft: '1rem',
         marginRight: '1rem'
-    }
+    },
+    z100: {
+        zIndex: 100,
+    },
+    dNoneUpToMd: {
+        [theme.breakpoints.up('sm')]: {
+            display: 'block',
+        },
+        [theme.breakpoints.down('sm')]: {
+            display: 'none',
+        },
+    },
 }));
 
 function NavBar() {
@@ -42,22 +54,28 @@ function NavBar() {
                     <img src={Logo} alt="Luksy Designs Customs" className={classes.logo} />
                 </a>
                
-                <Link to="/about" className={clsx(classes.noDecoration, classes.navTitles, classes.px1)}>
+                
+                <Link to="/about" className={clsx(classes.noDecoration, classes.navTitles, classes.px1, classes.dNoneUpToMd)}>
                     About
                 </Link>
 
-                <Link to="/contact" className={clsx(classes.noDecoration, classes.navTitles)}>
+                <Link to="/contact" className={clsx(classes.noDecoration, classes.navTitles, classes.dNoneUpToMd)}>
                     Contact
                 </Link>
 
-                <div className={classes.my1}>
+                <div className={clsx(classes.my1, classes.z100, classes.dNoneUpToMd)}>
                     <ShoesDropDown />
                 </div>
-                
-                <div>
+            
+                <div className={clsx(classes.z100, classes.dNoneUpToMd)}>
                     <ConnectDropDown />
                 </div>
-            
+                
+
+                <div className={classes.dNoneMdUp}>
+                    <BurgerMenu />
+                </div>
+                {/* show and hide burger menu here, media queries */}
             </Toolbar>
         </AppBar>
     );
