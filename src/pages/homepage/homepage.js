@@ -1,9 +1,10 @@
 import React from 'react';
+import HeroSection from '../../components/atoms/hero/hero-image';
 
 function Home() {
     return (
         <div>
-            <h1>WELCOME PEOPLE</h1>
+            <HeroSection />
         </div>
     );
 }
