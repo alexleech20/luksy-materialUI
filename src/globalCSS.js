@@ -75,6 +75,9 @@ export const GlobalCss = withStyles(() => ({
         '.p1': {
             padding: '1rem',
         },
+        'p2': {
+            padding: '1.5rem',
+        },
         '.pt05': {
             paddingTop: '.5rem',
         },
@@ -126,11 +129,34 @@ export const GlobalCss = withStyles(() => ({
             paddingLeft: '1rem',
             paddingRight: '1rem',
         },
+        '.px2': {
+            paddingLeft: '1.5rem',
+            paddingRight: '1.5rem',
+        },
+        '.px3': {
+            paddingLeft: '2rem',
+            paddingRight: '2rem',
+        },
 
         // misc
 
-        'noDecoration': {
+        '.noDecoration': {
             textDecoration: 'none',
+        },
+
+        // Hiding certain breakpoints
+
+        '.displaySmNone': {
+            display: 'none',
+            '@media (min-width: 960px)' : {
+                display: 'block',
+            },
+        },
+        '.displayMdNone': {
+            display: 'block',
+            '@media (min-width: 960px)' : {
+                display: 'none',
+            },
         },
     }
 }))(() => null);
