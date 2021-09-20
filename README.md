@@ -1,3 +1,7 @@
+# Develop Branch > into Main
+
+During this project I create PR's into develop from my feature branches then once I feel there is enough content to go into the main branch and its all been tested for responsiveness etc then I will merge into main (where the live site is based off).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
