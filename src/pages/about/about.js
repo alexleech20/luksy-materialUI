@@ -27,7 +27,6 @@ function About() {
                 <Grid item xs={1}> {/* empty grid since material doesnt support offsets yet  */} </Grid>
                 <Grid item xs={12} md={4} spacing={1}>
                     <>
-                    ajdowahfaw
                         <img src={Image} alt="Lukman" className={classes.root} />
                     </>
                 </Grid>
