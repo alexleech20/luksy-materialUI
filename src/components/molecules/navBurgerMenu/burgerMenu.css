@@ -1,6 +1,6 @@
 /* Position and sizing of burger button */
 .bm-burger-button {
-    position: fixed;
+    position: absolute;
     width: 36px;
     height: 30px;
     right: 36px;
@@ -9,10 +9,9 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-    background: white;
+    background: black;
 }
 
-/* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
     background: black;
 }
@@ -27,7 +26,7 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-    background: white;
+    background: black;
 }
 
 /*
@@ -37,6 +36,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-menu-wrap {
     position: fixed;
     height: 100%;
+    top: 0;
 }
 
 /* General sidebar styles */
