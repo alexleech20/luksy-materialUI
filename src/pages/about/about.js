@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, Grid, Typography, Card, CardActionArea, CardMedia } from '@material-ui/core';
+import { makeStyles, Grid, Typography, Box } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import Image from './headshot.png';
 
@@ -23,49 +23,83 @@ function About() {
                     { TITLE }
                 </title>
             </Helmet>
-            <Grid container className="my3" justify="center" alignItems="center">
+            <Grid container className="my4" justify="center" alignItems="center">
                 <Grid item xs={1}> {/* empty grid since material doesnt support offsets yet  */} </Grid>
-                <Grid item xs={12} md={4}>
-                    <Card className={classes.root}>
-                        <CardActionArea>
-                            <CardMedia 
-                                className={classes.media}
-                                image={Image}
-                                title="Lukman's headshot"
-                                component="img"
-                            />
-                            </CardActionArea>
-                    </Card>
+                <Grid item xs={12} md={4} spacing={1}>
+                    <>
+                        <img src={Image} alt="Lukman" className={classes.root} />
+                    </>
                 </Grid>
                 <Grid item xs={12} md={4} spacing={1}>
-                    <Typography>
-                        Hey! Im Lukman
-                    </Typography>
-                    <Typography>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, reiciendis recusandae iure fugit sint cupiditate cum aut tempora libero voluptates distinctio quod quidem modi hic sapiente pariatur quo ut repudiandae.
-                    </Typography>
+                    <Box m={2}>
+                        <Typography>
+                            <Box fontWeight="fontWeightBold">
+                                Hey! Im Lukman
+                            </Box>
+                        </Typography>
+                        <Typography className="my2">
+                            I am the co-founder of Luksydesigns Customs which was created in May 2020. Originally from London but I am now based in Newcastle UK. My artwork is inspired by Abstract art, Fine art and use of colours.
+                        </Typography>
+                        <Typography>
+                            All of the shoes that I have customized have been hand-painted as Luksydesigns Customs is a company built off being unique and different to showcase shoe customs.
+                        </Typography>
+                    </Box>
                 </Grid>
             </Grid>
-            <Grid container className="my3" justify="center" alignItems="center">
+            <Grid container className="my4" justify="center" alignItems="center" m={3}>
+                <Grid item xs={1}></Grid>
+                <Grid item xs={12} md={4} className="displayMdNone">
+                    <Box m={2}>
+                        <Typography variant="h3">
+                            Some important points
+                        </Typography>
+                    </Box> 
+                </Grid>
+                <Grid item justifyContent="space-between" xs={12} md={4} spacing={1}>
+                    <Box m={2}>
+                        <Typography>
+                            <strong>Shipping: </strong>Worldwide <br />
+                        </Typography>
+                        <Typography className="my2">
+                            <strong>Based: </strong>Newcastle, UK <br />
+                        </Typography>
+                        <Typography>
+                            <strong>Personalisation: </strong>We can do custom work based off your designs, get creative! (or talk to us about your ideas)<br />
+                        </Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} md={4} className="displaySmNone">
+                    <Box m={2}>
+                        <Typography variant="h3">
+                            Some important points
+                        </Typography>
+                    </Box> 
+                </Grid>
+            </Grid>
+            <Grid container className="my4" justify="center" alignItems="center" m={2}>
                 <Grid item xs={1}></Grid>
                 <Grid item xs={12} md={4}>
-                    <Typography variant="h3">
-                        Customisation
-                    </Typography>
+                    <Box m={2}>
+                        <Typography variant="h3">
+                            Returns policy
+                        </Typography>
+                    </Box>
                 </Grid>
                 <Grid item xs={12} md={4} spacing={1}>
-                    <Typography>
-                        Here at Luksy Designs Customs we aim to supply you 
-                        with the best designs possible, whether thats you providing 
-                        us with with a design you want or us brainstorming some ideas! <br />
-                        Many of our clients provide us with the shoes prior, if you are wanting
-                        us to order the shoes for you we will need to take a deposit or payment
-                        prior. We promote the idea of you purchasing the shoes prior to ensure 
-                        authenticity of the product. The customizations can take a while to 
-                        complete so dont be shy to message us on our socials for an update! <br />
-                        All of our shoes are hand painted using Angelus acrylic leather paint 
-                        (weather proofing is an optional extra at £10).
-                    </Typography>
+                    <Box m={2}>
+                        <Typography>
+                            Due to all of our products being custom to the customer, we do not offer a 'return policy' at 
+                            this moment in time, all sales are final. If you have any concerns regarding this issue please 
+                            contact us on one of our socials or by our <a href="mailto:luksydesignscustoms@gmail.com" className="no-underline a-red">email</a>.
+                        </Typography>
+                        <Typography>
+                            We want all of our customers to have the best customer experience possible that we can offer, 
+                            if there is something wrong with your product, ie, its not the same design as what you ordered 
+                            or it has been damaged during shipping please contact us via <a href="mailto:luksydesignscustoms@gmail.com" className="no-underline a-red">email</a>
+                            . If this is the case, simply inform us via email and if approved, send us the slightly used product 
+                            within 30 days of receipt and we will attempt to repair.
+                        </Typography>
+                    </Box> 
                 </Grid>
             </Grid>
         </div>
