@@ -2,6 +2,10 @@
 
 During this project I create PR's into develop from my feature branches then once I feel there is enough content to go into the main branch and its all been tested for responsiveness etc then I will merge into main (where the live site is based off).
 
+## Unnecessarily computed property
+
+This error will display as I've done media queries in apparently 'not the way material ui deems right' just ignore it, doesnt effect anything besides the terminal :)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
