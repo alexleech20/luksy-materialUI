@@ -1,12 +1,16 @@
 import React from 'react';
 import { makeStyles, Button, ClickAwayListener, Grow, Paper, Popper, MenuItem, MenuList, Typography }  from '@material-ui/core';
 import clsx from 'clsx';
-import Nike from '../../../pages/shoes/nike';
+// import Nike from '../../../pages/shoes/nike';
 
 const useStyles = makeStyles((theme) => ({
     uppercaseNone: {
         textTransform: 'none',
-    }
+    },
+    defaultStyling: {
+        textDecoration: 'none',
+        color: '#000000',
+    },
 }));
 
 function ShoesDropDown() {
@@ -66,9 +70,15 @@ function ShoesDropDown() {
                         <Paper>
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                    <MenuItem onClick={handleClose} to={Nike}>Nike</MenuItem>
-                                    <MenuItem onClick={handleClose}>Vans</MenuItem>
-                                    <MenuItem onClick={handleClose}>Kids Shoes</MenuItem>
+                                    <a className={classes.defaultStyling} href="/nike">
+                                        <MenuItem onClick={handleClose}>Nike </MenuItem>
+                                    </a>
+                                    <a className={classes.defaultStyling} href="/vans">
+                                        <MenuItem onClick={handleClose}>Vans </MenuItem>
+                                    </a>
+                                    <a className={classes.defaultStyling} href="/kids-shoes">
+                                        <MenuItem onClick={handleClose}>Kids Shoes </MenuItem>
+                                    </a>
                                 </MenuList>
                             </ClickAwayListener>
                         </Paper>

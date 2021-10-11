@@ -34,7 +34,9 @@ function Home() {
     return (
         <div>
             <Helmet>
-                { TITLE }
+                <title>
+                    { TITLE }
+                </title>
             </Helmet>
 
             <HeroSection />
