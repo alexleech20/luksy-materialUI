@@ -24,6 +24,11 @@ function About() {
                 </title>
             </Helmet>
             <Grid container className="my4" justify="center" alignItems="center">
+                <Grid item xs={12}>
+                    <Typography variant="h1" className="mb1">
+                        About Us
+                    </Typography>
+                </Grid>
                 <Grid item xs={1}> {/* empty grid since material doesnt support offsets yet  */} </Grid>
                 <Grid item xs={12} md={4} spacing={1}>
                     <>
