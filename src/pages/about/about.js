@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, Grid, Typography, Card, CardActionArea, CardMedia, Box } from '@material-ui/core';
+import { makeStyles, Grid, Typography, Box } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import Image from './headshot.png';
 
