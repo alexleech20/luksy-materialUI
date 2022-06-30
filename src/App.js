@@ -10,15 +10,39 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import NavBar from './components/organisms/navbar';
 import Footer from './components/organisms/footer';
 import GlobalCss from './globalCSS';
-import { createTheme } from '@material-ui/core';
-import { ThemeProvider } from '@material-ui/styles';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 
 const theme = createTheme({
   typography: {
-    fontFamily: [
-      'Lexend',
-      'sans-serif'
-    ].join(','),
+    fontFamily: ['Lexend', 'sans-serif'].join(','),
+    h1: {
+      fontSize: '1.75rem',
+      fontWeight: 300,
+      fontFamily: ['Lexend', 'sans-serif'].join(','),
+    },
+    h2: {
+      fontSize: '1.5rem',
+      fontWeight: 300,
+      fontFamily: ['Lexend', 'sans-serif'].join(','),
+    },
+    h3: {
+      fontSize: '1.5rem',
+      fontWeight: 400,
+      fontFamily: ['Lexend', 'sans-serif'].join(','),
+    },
+    h4: {
+      fontSize: '1rem',
+      fontWeight: 300,
+      fontFamily: ['Lexend', 'sans-serif'].join(','),
+    },
+    button: {
+      fontFamily: ['Lexend', 'sans-serif'].join(','),
+    }
+  },
+  colours: {
+    cream: {
+      color: '#f0c090',
+    }
   }
 });
 

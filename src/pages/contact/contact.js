@@ -1,9 +1,56 @@
 import React from 'react';
+import { makeStyles, Grid, Typography, ListItem, ListItemIcon, Card } from '@material-ui/core';
+import { Helmet } from 'react-helmet';
+import { useStyles } from './contact-styles.js';
+import { FiInstagram } from 'react-icons/fi';
+
 
 function Contact() {
+
+    const TITLE = "Contact Us";
+
+    const classes = useStyles();
+
     return (
+        
         <div>
-            <h1>WELCOME PEOPLE to contact page</h1>
+            <Helmet>
+                <title>
+                    { TITLE }
+                </title>
+            </Helmet>
+
+            <Grid container>
+                <Grid item xs={12}>
+                    <Typography variant="h1" className="mb1">
+                        Have a chat with us!
+                    </Typography>
+                </Grid>
+
+                <Grid item xs={6}>
+                    <Typography>
+                        Our socials
+                    </Typography>
+                    <Card className={classes.cardWidth}>
+                        <ListItem>
+                            <ListItemIcon>
+                                <FiInstagram className="pr1" />
+                            </ListItemIcon>
+                            <Typography>
+                                Instagram
+                            </Typography>
+                        </ListItem>
+                    </Card>
+                </Grid>
+
+                <Grid item xs={6}>
+                    <Typography>
+
+                    </Typography>
+                </Grid>
+
+            </Grid>
+
         </div>
     );
 }
