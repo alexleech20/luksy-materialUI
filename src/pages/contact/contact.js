@@ -1,14 +1,9 @@
 import React from 'react';
-import { makeStyles, Grid } from '@material-ui/core';
+import { makeStyles, Grid, Typography, ListItem, ListItemIcon, Card } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
+import { useStyles } from './contact-styles.js';
+import { FiInstagram, FiTwitter, } from 'react-icons/fi';
 
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        maxWidth: 345,
-        maxHeight: 345,
-    },
-}));
 
 function Contact() {
 
@@ -25,9 +20,36 @@ function Contact() {
                 </title>
             </Helmet>
 
-            <h1>
-                WELCOME PEOPLE to contact page
-            </h1>
+            <Grid container>
+                <Grid item xs={12}>
+                    <Typography variant="h1" className="mb1">
+                        Have a chat with us!
+                    </Typography>
+                </Grid>
+
+                <Grid item xs={6}>
+                    <Typography>
+                        Our socials
+                    </Typography>
+                    <Card className={classes.cardWidth}>
+                        <ListItem>
+                            <ListItemIcon>
+                                <FiInstagram className="pr1" />
+                            </ListItemIcon>
+                            <Typography>
+                                Instagram
+                            </Typography>
+                        </ListItem>
+                    </Card>
+                </Grid>
+
+                <Grid item xs={6}>
+                    <Typography>
+
+                    </Typography>
+                </Grid>
+
+            </Grid>
 
         </div>
     );
