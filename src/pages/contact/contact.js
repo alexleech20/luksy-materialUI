@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles, Grid, Typography, ListItem, ListItemIcon, Card } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import { useStyles } from './contact-styles.js';
-import { FiInstagram, FiTwitter, } from 'react-icons/fi';
+import { FiInstagram } from 'react-icons/fi';
 
 
 function Contact() {
