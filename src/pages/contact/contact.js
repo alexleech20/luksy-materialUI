@@ -20,9 +20,9 @@ function Contact() {
                 </title>
             </Helmet>
 
-            <Grid container>
+            <Grid container className="my4">
                 <Grid item xs={12}>
-                    <Typography variant="h1" className="mb1">
+                    <Typography variant="heroText" className="mb1">
                         Have a chat with us!
                     </Typography>
                 </Grid>

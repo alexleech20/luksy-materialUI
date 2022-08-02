@@ -116,6 +116,7 @@ function Home() {
                             <Link href="https://www.facebook.com/luksydesignscustoms" color="inherit"><AiOutlineFacebook className="pr1" />Drop us a message!</Link>
                         </Typography>
                     </Box>
+                    <div className="loader"></div>
                 </Grid>
                 <Grid item xs={12} md={4} className="displaySmNone">
                     <Typography variant="h3">
