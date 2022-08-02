@@ -29,6 +29,11 @@ const theme = createTheme({
       fontWeight: 300,
       fontFamily: ['Lexend', 'sans-serif'].join(','),
     },
+    heroText: {
+      fontSize: '2.5rem',
+      fontWeight: 300,
+      fontFamily: ['Lexend', 'sans-serif'].join(','),
+    },
     button: {
       fontFamily: ['Lexend', 'sans-serif'].join(','),
     }

@@ -25,7 +25,7 @@ function HeroSection() {
     return (
         <div>
             <Box className={classes.hero}>
-                <Typography variant="h3">
+                <Typography variant="heroText">
                     Welcome!
                 </Typography>
             </Box>
