@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         color: "#fff",
         fontSize: "4rem",
-        zIndex: '-1',
     }
 }));
 
