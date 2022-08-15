@@ -1,6 +1,5 @@
 import React from 'react';
-import { makeStyles, withStyles, AppBar, Toolbar, IconButton, Typography, Menu, MenuItem, Button }  from '@material-ui/core';
-
+import { makeStyles, AppBar, Toolbar }  from '@material-ui/core';
 import Logo from '../../assets/logo/logo2.png';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
@@ -34,6 +33,12 @@ const useStyles = makeStyles((theme) => ({
             display: 'none',
         },
     },
+    dNoneMobile: {
+        [theme.breakpoints.down('sm')]: {
+            display: 'none',
+        },
+        display: 'block',
+    }
 }));
 
 
@@ -56,11 +61,11 @@ function NavBar() {
                     Contact
                 </Link>
                
-                <div className={classes.px2}>
+                <div className={clsx(classes.px2, classes.dNoneMobile)}>
                     <ShoesDropDown />
                 </div>
 
-                <div>
+                <div className={classes.dNoneMobile}>
                     <ConnectDropDown />
                 </div>
 
