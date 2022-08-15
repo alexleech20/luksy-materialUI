@@ -4,10 +4,13 @@ import clsx from 'clsx';
 // import Nike from '../../../pages/shoes/nike';
 
 const useStyles = makeStyles((theme) => ({
-    uppercaseNone: {
-        textTransform: 'none',
-    },
     defaultStyling: {
+        textDecoration: 'none',
+        color: '#000000',
+    },
+    buttonText: {
+        fontSize: '20px',
+        textTransform: 'none',
         textDecoration: 'none',
         color: '#000000',
     },
@@ -55,7 +58,7 @@ function ShoesDropDown() {
                     aria-controls={open ? 'menu-list-grow' : undefined}
                     aria-haspopup="true"
                     onClick={handleToggle}
-                    className={clsx(classes.ml1, classes.uppercaseNone)}
+                    className={clsx(classes.ml1, classes.buttonText)}
                 >
                     Shoes
                 </Button>

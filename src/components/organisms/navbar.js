@@ -15,23 +15,15 @@ const useStyles = makeStyles((theme) => ({
     logo: {
         maxWidth: 120,
     },
-    navTitles: {
+    px2: {
+        paddingLeft: '2rem',
+        paddingRight: '2rem',
+    },
+    navLinks: {
         textDecoration: 'none',
         color: '#000000',
-    },
-    px1: {
-        paddingLeft: '1rem',
-        paddingRight: '1rem',
-    },
-    uppercaseNone: {
+        fontSize: '20px',
         textTransform: 'none',
-    },
-    my1: {
-        marginLeft: '1rem',
-        marginRight: '1rem'
-    },
-    z100: {
-        zIndex: 100,
     },
     dNoneUpToMd: {
         [theme.breakpoints.up('sm')]: {
@@ -41,7 +33,14 @@ const useStyles = makeStyles((theme) => ({
             display: 'none',
         },
     },
+    dNoneMobile: {
+        [theme.breakpoints.down('sm')]: {
+            display: 'none',
+        },
+        display: 'block',
+    }
 }));
+
 
 function NavBar() {
     const classes = useStyles();
@@ -53,29 +52,26 @@ function NavBar() {
                 <a href="/">
                     <img src={Logo} alt="Luksy Designs Customs" className={classes.logo} />
                 </a>
-               
                 
-                <Link to="/about" className={clsx(classes.noDecoration, classes.navTitles, classes.px1, classes.dNoneUpToMd)}>
+                <Link to="/about" className={clsx(classes.navLinks, classes.px2, classes.dNoneUpToMd)}>
                     About
                 </Link>
 
-                <Link to="/contact" className={clsx(classes.noDecoration, classes.navTitles, classes.dNoneUpToMd)}>
+                <Link to="/contact" className={clsx(classes.navLinks, classes.dNoneUpToMd)}>
                     Contact
                 </Link>
-
-                <div className={clsx(classes.my1, classes.z100, classes.dNoneUpToMd)}>
+               
+                <div className={clsx(classes.px2, classes.dNoneMobile)}>
                     <ShoesDropDown />
                 </div>
-            
-                <div className={clsx(classes.z100, classes.dNoneUpToMd)}>
+
+                <div className={classes.dNoneMobile}>
                     <ConnectDropDown />
                 </div>
-                
 
                 <div className={classes.dNoneMdUp}>
                     <BurgerMenu />
                 </div>
-                {/* show and hide burger menu here, media queries */}
             </Toolbar>
         </AppBar>
     );

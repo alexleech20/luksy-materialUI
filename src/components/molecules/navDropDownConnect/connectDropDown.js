@@ -3,10 +3,13 @@ import { makeStyles, Button, ClickAwayListener, Grow, Paper, Popper, MenuItem, M
 import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
-    uppercaseNone: {
-        textTransform: 'none',
-    },
     dropDownLinks: {
+        textDecoration: 'none',
+        color: '#000000',
+    },
+    buttonText: {
+        fontSize: '20px',
+        textTransform: 'none',
         textDecoration: 'none',
         color: '#000000',
     },
@@ -54,7 +57,7 @@ function ConnectDropDown() {
                     aria-controls={open ? 'menu-list-grow' : undefined}
                     aria-haspopup="true"
                     onClick={handleToggle}
-                    className={clsx(classes.ml1, classes.uppercaseNone)}
+                    className={clsx(classes.ml1, classes.buttonText)}
                 >
                     Connect
                 </Button>
