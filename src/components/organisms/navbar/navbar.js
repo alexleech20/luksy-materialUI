@@ -45,13 +45,14 @@ const useStyles = makeStyles((theme) => ({
             display: 'none',
         },
     },
-    dNoneMobile: {
-        [theme.breakpoints.down('sm')]: {
+    dNonePastMobile: {
+        [theme.breakpoints.up('sm')]: {
             display: 'none',
         },
-        display: 'block',
+        [theme.breakpoints.down('sm')]: {
+            display: 'block',
+        },
     },
-
 }));
 
 
@@ -74,15 +75,15 @@ function NavBar() {
                     <p className="underline-hover-effect">Contact</p>
                 </Link>
                
-                <div className={clsx(classes.px2, classes.dNoneMobile)}>
+                <div className={clsx(classes.px2, classes.dNoneUpToMd)}>
                     <ShoesDropDown />
                 </div>
 
-                <div className={classes.dNoneMobile}>
+                <div className={classes.dNoneUpToMd}>
                     <ConnectDropDown />
                 </div>
 
-                <div className={classes.dNoneMdUp}>
+                <div className={classes.dNonePastMobile}>
                     <BurgerMenu />
                 </div>
             </Toolbar>
