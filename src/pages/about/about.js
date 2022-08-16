@@ -70,7 +70,7 @@ function About() {
                 <Grid item xs={1}></Grid>
                 <Grid item xs={12} md={4} className="displayMdNone">
                     <Box m={2}>
-                        <Typography variant="h3">
+                        <Typography variant="h2" className="neon">
                             Some important points
                         </Typography>
                     </Box> 
@@ -90,7 +90,7 @@ function About() {
                 </Grid>
                 <Grid item xs={12} md={4} className="displaySmNone">
                     <Box m={2}>
-                        <Typography variant="h3">
+                        <Typography variant="h2" className="neon">
                             Some important points
                         </Typography>
                     </Box> 
@@ -100,7 +100,7 @@ function About() {
                 <Grid item xs={1}></Grid>
                 <Grid item xs={12} md={4}>
                     <Box m={2}>
-                        <Typography variant="h3">
+                        <Typography variant="h2" className="neon">
                             Returns policy
                         </Typography>
                     </Box>
