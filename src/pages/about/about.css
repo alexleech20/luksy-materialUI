@@ -2,7 +2,7 @@
 
 .neon {
     animation: neon 5s infinite;
-    font-size: 12rem;
+    font-size: 5rem;
 }
 
 @keyframes neon {

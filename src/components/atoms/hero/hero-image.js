@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles, Box, Typography } from '@material-ui/core';
 import './hero.css';
 import hero from './home-hero.jpg';
+import '../../../pages/about/about.css';
 
 const useStyles = makeStyles((theme) => ({
     hero: {
@@ -25,7 +26,7 @@ function HeroSection() {
     return (
         <div>
             <Box className={classes.hero}>
-                <Typography variant="heroText">
+                <Typography variant="heroText" className="neon">
                     Welcome!
                 </Typography>
             </Box>
