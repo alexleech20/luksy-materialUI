@@ -1,12 +1,12 @@
 import React from 'react';
 import { makeStyles, AppBar, Toolbar }  from '@material-ui/core';
-import Logo from '../../assets/logo/logo2.png';
+import Logo from '../../../assets/logo/logo2.png';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
-import ShoesDropDown from '../molecules/navDropDownShoes/shoesDropDown';
-import ConnectDropDown from '../molecules/navDropDownConnect/connectDropDown';
-import BurgerMenu from '../molecules/navBurgerMenu/navBurgerMenu';
-import theme from '../../App.js';
+import ShoesDropDown from '../../molecules/navDropDownShoes/shoesDropDown';
+import ConnectDropDown from '../../molecules/navDropDownConnect/connectDropDown';
+import BurgerMenu from '../../molecules/navBurgerMenu/navBurgerMenu';
+import theme from '../../../App.js';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -25,6 +25,16 @@ const useStyles = makeStyles((theme) => ({
         color: 'azure',
         fontSize: '20px',
         textTransform: 'none',
+        background: 'linear-gradient(#d99a5a, #d99a5a)',
+        backgroundSize: '0% 0.1em',
+        backgroundPositionY: '100%',
+        backgroundPositionX: '0%',
+        backgroundRepeat: 'no-repeat',
+        transition: 'background-size 0.2s ease-in-out',
+
+        '&hover': {
+            backgroundSize: '100% 0.1em'
+        },
     },
     dNoneUpToMd: {
         [theme.breakpoints.up('sm')]: {
@@ -39,7 +49,8 @@ const useStyles = makeStyles((theme) => ({
             display: 'none',
         },
         display: 'block',
-    }
+    },
+
 }));
 
 
@@ -54,9 +65,11 @@ function NavBar() {
                     <img src={Logo} alt="Luksy Designs Customs" className={classes.logo} />
                 </a>
                 
-                <Link to="/about" className={clsx(classes.navLinks, classes.px2, classes.dNoneUpToMd)}>
+                <Link to="/about" className={clsx(classes.navLinks, classes.px2, classes.dNoneUpToMd, classes.left)}>
                     About
                 </Link>
+
+                <a href='/about' style={{ color: 'azure' }} className={classes.left}>About v2</a>
 
                 <Link to="/contact" className={clsx(classes.navLinks, classes.dNoneUpToMd)}>
                     Contact
