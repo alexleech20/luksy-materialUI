@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import ShoesDropDown from '../../molecules/navDropDownShoes/shoesDropDown';
 import ConnectDropDown from '../../molecules/navDropDownConnect/connectDropDown';
 import BurgerMenu from '../../molecules/navBurgerMenu/navBurgerMenu';
+import './navbar.css';
 import theme from '../../../App.js';
 
 
@@ -66,13 +67,11 @@ function NavBar() {
                 </a>
                 
                 <Link to="/about" className={clsx(classes.navLinks, classes.px2, classes.dNoneUpToMd, classes.left)}>
-                    About
+                    <p className="underline-hover-effect">About</p>
                 </Link>
 
-                <a href='/about' style={{ color: 'azure' }} className={classes.left}>About v2</a>
-
                 <Link to="/contact" className={clsx(classes.navLinks, classes.dNoneUpToMd)}>
-                    Contact
+                    <p className="underline-hover-effect">Contact</p>
                 </Link>
                
                 <div className={clsx(classes.px2, classes.dNoneMobile)}>
