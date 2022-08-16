@@ -19,9 +19,9 @@ const useStyles = makeStyles((theme) => ({
     },
     pinkBorder: {
         borderBottom: '2px solid #FF10F0',
-        margin: '2rem 10% 2rem 10%',
+        margin: '2rem 30% 2rem 30%',
         display: 'flex',
-        maxWidth: '80%',
+        maxWidth: '40%',
     },
 }));
 
