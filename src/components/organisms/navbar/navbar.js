@@ -1,12 +1,13 @@
 import React from 'react';
 import { makeStyles, AppBar, Toolbar }  from '@material-ui/core';
-import Logo from '../../assets/logo/logo2.png';
+import Logo from '../../../assets/logo/logo2.png';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
-import ShoesDropDown from '../molecules/navDropDownShoes/shoesDropDown';
-import ConnectDropDown from '../molecules/navDropDownConnect/connectDropDown';
-import BurgerMenu from '../molecules/navBurgerMenu/navBurgerMenu';
-import theme from '../../App.js';
+import ShoesDropDown from '../../molecules/navDropDownShoes/shoesDropDown';
+import ConnectDropDown from '../../molecules/navDropDownConnect/connectDropDown';
+import BurgerMenu from '../../molecules/navBurgerMenu/navBurgerMenu';
+import './navbar.css';
+import theme from '../../../App.js';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -25,6 +26,16 @@ const useStyles = makeStyles((theme) => ({
         color: 'azure',
         fontSize: '20px',
         textTransform: 'none',
+        background: 'linear-gradient(#d99a5a, #d99a5a)',
+        backgroundSize: '0% 0.1em',
+        backgroundPositionY: '100%',
+        backgroundPositionX: '0%',
+        backgroundRepeat: 'no-repeat',
+        transition: 'background-size 0.2s ease-in-out',
+
+        '&hover': {
+            backgroundSize: '100% 0.1em'
+        },
     },
     dNoneUpToMd: {
         [theme.breakpoints.up('sm')]: {
@@ -34,12 +45,14 @@ const useStyles = makeStyles((theme) => ({
             display: 'none',
         },
     },
-    dNoneMobile: {
-        [theme.breakpoints.down('sm')]: {
+    dNonePastMobile: {
+        [theme.breakpoints.up('sm')]: {
             display: 'none',
         },
-        display: 'block',
-    }
+        [theme.breakpoints.down('sm')]: {
+            display: 'block',
+        },
+    },
 }));
 
 
@@ -54,23 +67,23 @@ function NavBar() {
                     <img src={Logo} alt="Luksy Designs Customs" className={classes.logo} />
                 </a>
                 
-                <Link to="/about" className={clsx(classes.navLinks, classes.px2, classes.dNoneUpToMd)}>
-                    About
+                <Link to="/about" className={clsx(classes.navLinks, classes.px2, classes.dNoneUpToMd, classes.left)}>
+                    <p className="underline-hover-effect">About</p>
                 </Link>
 
                 <Link to="/contact" className={clsx(classes.navLinks, classes.dNoneUpToMd)}>
-                    Contact
+                    <p className="underline-hover-effect">Contact</p>
                 </Link>
                
-                <div className={clsx(classes.px2, classes.dNoneMobile)}>
+                <div className={clsx(classes.px2, classes.dNoneUpToMd)}>
                     <ShoesDropDown />
                 </div>
 
-                <div className={classes.dNoneMobile}>
+                <div className={classes.dNoneUpToMd}>
                     <ConnectDropDown />
                 </div>
 
-                <div className={classes.dNoneMdUp}>
+                <div className={classes.dNonePastMobile}>
                     <BurgerMenu />
                 </div>
             </Toolbar>

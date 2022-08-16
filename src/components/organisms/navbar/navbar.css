@@ -1,0 +1,27 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.underline-hover-effect {
+    display: inline-block;
+    padding-bottom: .35rem;
+    position: relative;
+}
+
+.underline-hover-effect::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: aqua;
+    background-image: linear-gradient(to right, #FF10F0, #ff1097);
+    transition: width 0.25s ease-out;
+}
+
+.underline-hover-effect:hover::before {
+    width: 80%;
+}

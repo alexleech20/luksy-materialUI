@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
     },
     pinkBorder: {
         borderBottom: '2px solid #FF10F0',
-        margin: '2rem 0rem 2rem',
+        margin: '2rem 10% 2rem 10%',
+        display: 'flex',
         maxWidth: '80%',
     },
 }));
@@ -54,7 +55,9 @@ function About() {
                     <Box m={2}>
                         <Typography>
                             <Box fontWeight="fontWeightBold">
-                                Hey! Im Lukman
+                                <Typography variant="h3">
+                                    Hey! Im Lukman
+                                </Typography>
                             </Box>
                         </Typography>
                         <Typography className="my2">

@@ -59,7 +59,7 @@ function ConnectDropDown() {
                     onClick={handleToggle}
                     className={clsx(classes.ml1, classes.buttonText)}
                 >
-                    Connect
+                    <p className="underline-hover-effect">Connect</p>
                 </Button>
             </Typography>
 

@@ -7,8 +7,8 @@ import Vans from './pages/shoes/vans';
 import Nike from './pages/shoes/nike';
 import KidsShoes from './pages/shoes/kids-shoes';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import NavBar from './components/organisms/navbar';
-import Footer from './components/organisms/footer';
+import NavBar from './components/organisms/navbar/navbar.js';
+import Footer from './components/organisms/footer/footer';
 import GlobalCss from './globalCSS';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 

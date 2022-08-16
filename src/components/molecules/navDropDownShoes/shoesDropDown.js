@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles, Button, ClickAwayListener, Grow, Paper, Popper, MenuItem, MenuList, Typography }  from '@material-ui/core';
 import clsx from 'clsx';
+import './shoesDropDown.css';
 // import Nike from '../../../pages/shoes/nike';
 
 const useStyles = makeStyles((theme) => ({
@@ -60,7 +61,7 @@ function ShoesDropDown() {
                     onClick={handleToggle}
                     className={clsx(classes.ml1, classes.buttonText)}
                 >
-                    Shoes
+                    <p className="underline-hover-effect">Shoes</p>
                 </Button>
             </Typography>
 
