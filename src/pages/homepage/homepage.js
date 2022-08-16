@@ -7,6 +7,7 @@ import { AiOutlineFacebook } from 'react-icons/ai';
 import { RiShoppingCart2Line } from 'react-icons/ri';
 import { HiOutlineMail } from 'react-icons/hi';
 import homeImagery from '../../assets/shoes/airforce-lv2.JPG';
+import '../about/about.css';
 
 const useStyles = makeStyles((theme) => ({
     Card: {
@@ -54,7 +55,7 @@ function Home() {
                 </Grid>
                 <Grid item xs={12} md={4}>
                     <Box m={2}>
-                        <Typography variant="h3" className="pb2">
+                        <Typography variant="h2" className="pb2 neon">
                             Stencil work
                         </Typography>
                         <Typography>
@@ -76,7 +77,7 @@ function Home() {
                 <Grid item xs={1}></Grid>
                 <Grid item xs={12} md={4}>
                     <Box m={2}>
-                        <Typography variant="h3">
+                        <Typography variant="h2" className="neon">
                             What we offer
                         </Typography>
                     </Box>
@@ -94,7 +95,7 @@ function Home() {
             <Grid container className="my3" justify="center" alignItems="center">
                 <Grid item xs={1}></Grid>
                 <Grid item xs={12} md={4} className="displayMdNone">
-                    <Typography variant="h3">
+                    <Typography variant="h2">
                         Visit our social media links!
                     </Typography>
                 </Grid>
@@ -119,7 +120,7 @@ function Home() {
                     <div className="loader"></div>
                 </Grid>
                 <Grid item xs={12} md={4} className="displaySmNone">
-                    <Typography variant="h3">
+                    <Typography variant="h2" className="neon">
                         Visit our social media links!
                     </Typography>
                 </Grid>

@@ -10,7 +10,7 @@ class BurgerMenu extends React.Component {
 
     render () {
         return (
-            <Menu right width={ '100%' } disableAutoFocus >
+            <Menu right width={ '100%' } disableAutoFocus>
                 <a className="menu-item" href="/">Home</a>
                 <a className="menu-item" href="/about">About</a>
                 <a className="menu-item" href="/nike">Nike</a>

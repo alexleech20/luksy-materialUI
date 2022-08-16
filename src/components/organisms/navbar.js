@@ -6,11 +6,12 @@ import clsx from 'clsx';
 import ShoesDropDown from '../molecules/navDropDownShoes/shoesDropDown';
 import ConnectDropDown from '../molecules/navDropDownConnect/connectDropDown';
 import BurgerMenu from '../molecules/navBurgerMenu/navBurgerMenu';
+import theme from '../../App.js';
 
 
 const useStyles = makeStyles((theme) => ({
-    bgGrey: {
-        backgroundColor: '#D3D3D3',
+    navStyles: {
+        backgroundColor: '#353535',
     },
     logo: {
         maxWidth: 120,
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
     navLinks: {
         textDecoration: 'none',
-        color: '#000000',
+        color: 'azure',
         fontSize: '20px',
         textTransform: 'none',
     },
@@ -46,7 +47,7 @@ function NavBar() {
     const classes = useStyles();
 
     return (
-        <AppBar position="static" className={classes.bgGrey}>
+        <AppBar position="static" className={classes.navStyles}>
             <Toolbar>
 
                 <a href="/">

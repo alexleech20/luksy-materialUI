@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '20px',
         textTransform: 'none',
         textDecoration: 'none',
-        color: '#000000',
+        color: 'azure',
     },
 }));
 
@@ -63,7 +63,7 @@ function ConnectDropDown() {
                 </Button>
             </Typography>
 
-            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal style={{ zIndex: 10}}>
                 {({ TransitionProps, placement }) => (
                     <Grow
                         {...TransitionProps}
