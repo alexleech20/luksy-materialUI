@@ -4,12 +4,12 @@ const theme = createTheme({
     typography: {
       fontFamily: ['Lexend', 'sans-serif'].join(','),
       h1: {
-        fontSize: '1.75rem',
-        fontWeight: 300,
+        fontSize: '2.5rem',
+        fontWeight: 400,
         fontFamily: ['Lexend', 'sans-serif'].join(','),
       },
       h2: {
-        fontSize: '1.5rem',
+        fontSize: '2rem',
         fontWeight: 300,
         fontFamily: ['Lexend', 'sans-serif'].join(','),
       },

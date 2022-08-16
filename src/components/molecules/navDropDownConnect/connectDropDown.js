@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '20px',
         textTransform: 'none',
         textDecoration: 'none',
-        color: '#000000',
+        color: 'azure',
     },
 }));
 

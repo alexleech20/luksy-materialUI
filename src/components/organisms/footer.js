@@ -6,8 +6,11 @@ const useStyles = makeStyles((theme) => ({
         width: '-webkit-fill-available',
         left: '0',
         bottom: '0',
-        backgroundColor: '#D3D3D3',
+        backgroundColor: '#353535',
         marginTop: 'auto',
+    },
+    footerBorder: {
+        borderBottom: '2px solid #FF10F0'
     },
 }));
 
@@ -83,6 +86,9 @@ function Footer() {
                             </Box>
                             
                         </Grid>
+                    </Grid>
+                    <Grid container className="pt2">
+                        <Grid xs={12} className={classes.footerBorder}></Grid>
                     </Grid>
                     <Grid container className="mt2">
                         <Box>

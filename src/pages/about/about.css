@@ -1,0 +1,20 @@
+
+
+.neon {
+    animation: neon 5s infinite;
+    font-size: 12rem;
+}
+
+@keyframes neon {
+    0%, 39%, 41%, 59%, 61%, 100% {
+            text-shadow:
+                white 0 0 12px, 
+                #ff3aad 0 0 24px, 
+                #ff3aad 0 0 36px;
+            
+        }
+
+        40%, 60% {
+            text-shadow: none;
+        }
+}
